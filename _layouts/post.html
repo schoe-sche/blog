@@ -12,6 +12,10 @@ layout: default
     {%- if page.tags.size > 0 %}<div class="tags" style="margin-top:14px">{% for t in page.tags %}<span>{{ t }}</span>{% endfor %}</div>{% endif %}
   </div>
 
+  {%- if page.image %}
+  <figure class="narrow hero-img"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: '' }}" width="1200" height="630" fetchpriority="high"></figure>
+  {%- endif %}
+
   <div class="narrow prose">
     {{ content }}
   </div>

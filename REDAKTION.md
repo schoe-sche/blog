@@ -45,6 +45,8 @@ Dateiname: `_posts/JJJJ-MM-TT-kurzer-slug.md` (Slug klein, ohne Umlaute: ae/oe/u
 title: "Prägnanter Titel (max. ca. 70 Zeichen)"
 description: "Ein bis zwei Sätze, die neugierig machen (max. ca. 160 Zeichen) – erscheint in der Übersicht und bei Google."
 tags: [Sicherheit, Datenschutz]   # 1–3 Tags aus: Sicherheit, Datenschutz, Souveränität, Open Source, Backup, Passkeys, Migration, E-Mail, Cloud
+image: /assets/img/posts/<slug>.jpg
+image_alt: "Kurze Beschreibung des Titelbilds"
 ---
 
 Einleitung (2–3 Absätze, ohne Zwischentitel) …
@@ -63,3 +65,20 @@ Optionaler hervorgehobener Kasten.
 ```
 
 Der Kasten (`<div class="box" markdown="1">`) und Tabellen sind erlaubt. Keine eigenen Stile, kein JavaScript.
+
+## Titelbild (Pflicht)
+
+Jeder Artikel bekommt ein Titelbild im TUXO-Stil. Es wird mit dem Skript im Repository erzeugt – keine Fotos oder fremden Bilder:
+
+```bash
+python3 tools/cover.py <slug> <motiv> "<Tag>"
+# Beispiel: python3 tools/cover.py backup-3-2-1-regel backup "Backup"
+python3 tools/cover.py --list   # verfügbare Motive
+```
+
+- `<slug>` = Teil des Dateinamens nach dem Datum (ohne `.md`).
+- `<motiv>` passend zum Thema wählen: passkey, key, lock, shield, alert, backup, cloud, mail, document, server, home, migrate, users, update, phishing, eye.
+- `<Tag>` = wichtigster Tag des Artikels (erscheint klein unten links im Bild).
+- Das Bild landet in `assets/img/posts/<slug>.jpg` und wird zusammen mit dem Artikel committet.
+- Im Front Matter `image` und `image_alt` eintragen (siehe Vorlage oben).
+

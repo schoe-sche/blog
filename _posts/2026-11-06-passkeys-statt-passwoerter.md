@@ -2,6 +2,8 @@
 title: "Passkeys: Warum Passwörter im KMU ausgedient haben"
 description: "Gestohlene Passwörter sind eines der häufigsten Einfallstore. Passkeys lösen das Problem an der Wurzel – und sind im Alltag sogar bequemer."
 tags: [Sicherheit, Passkeys]
+image: /assets/img/posts/passkeys-statt-passwoerter.jpg
+image_alt: "Symbol eines Schlüssels auf dunklem Netzwerk-Hintergrund"
 ---
 
 Fragen Sie in einem KMU, wie viele Passwörter die Mitarbeitenden im Kopf haben, hören Sie meist ein Lachen. Ein Dutzend Dienste, jeder mit eigenen Regeln, alle paar Monate ein neues Passwort. Das Ergebnis kennen wir alle: Passwörter werden wiederverwendet, auf Zettel geschrieben oder nach einem einfachen Muster gebildet.
