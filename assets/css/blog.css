@@ -46,7 +46,7 @@ main{flex:1}
 h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:1.18;letter-spacing:-.015em;text-wrap:balance}
 p{text-wrap:pretty}
 a{color:inherit;text-decoration:none}
-img,svg{display:block;max-width:100%}
+img,svg{display:block;max-width:100%;height:auto}
 button{font:inherit}
 :focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:6px}
 .visually-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
