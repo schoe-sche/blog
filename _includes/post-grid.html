@@ -1,0 +1,11 @@
+{%- comment -%}
+  Raster mit «Weitere Artikel laden». Parameter: posts (Liste), id (eindeutig), page_size (Standard 9).
+  Ohne JavaScript werden alle Artikel angezeigt.
+{%- endcomment -%}
+{%- assign size = include.page_size | default: 9 -%}
+<ul class="posts" id="{{ include.id }}" data-page-size="{{ size }}">
+  {%- for post in include.posts %}{% include post-card.html post=post %}{% endfor %}
+</ul>
+{%- if include.posts.size > size %}
+<div class="load-more"><button class="btn btn-ghost" type="button" data-more="{{ include.id }}" hidden>Weitere Artikel laden</button></div>
+{%- endif %}

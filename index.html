@@ -6,14 +6,52 @@ description: Praxiswissen zu sicherer, souveräner IT mit Open Source – verst�
   <p class="eyebrow">Blog</p>
   <h1>Sichere, souveräne IT –<br><span class="grad">verständlich erklärt.</span></h1>
   <p class="lede">Praxiswissen zu Datenschutz, Sicherheit und Open Source für Schweizer KMU und Privatpersonen. Ohne Fachchinesisch, mit konkreten nächsten Schritten.</p>
+  {% include topics.html %}
 </section>
 
-<section class="container" aria-label="Artikel">
-  {%- if site.posts.size > 0 %}
-  <ul class="posts">
-    {%- for post in site.posts %}{% include post-card.html post=post %}{% endfor %}
-  </ul>
-  {%- else %}
-  <p class="empty">Bald erscheinen hier die ersten Artikel.</p>
-  {%- endif %}
+{%- if site.posts.size > 0 %}
+{%- assign newest = site.posts | first %}
+<section class="container" aria-labelledby="featured-title">
+  <h2 class="visually-hidden" id="featured-title">Neuester Artikel</h2>
+  <a class="featured" href="{{ newest.url | relative_url }}">
+    {%- if newest.image %}
+    <span class="featured-img"><img src="{{ newest.image | relative_url }}" alt="" width="1200" height="630" fetchpriority="high"></span>
+    {%- endif %}
+    <span class="featured-body">
+      <span class="badge">Neu</span>
+      {%- assign words = newest.content | strip_html | number_of_words %}
+      <span class="meta">{% include date.html date=newest.date %}<span>{{ words | divided_by: 200 | plus: 1 }} Min. Lesezeit</span></span>
+      <span class="featured-title">{{ newest.title }}</span>
+      <span class="featured-desc">{{ newest.description }}</span>
+      <span class="more">Artikel lesen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </span>
+  </a>
 </section>
+
+{%- assign basics = site.posts | where: "grundlagen", true %}
+{%- if basics.size > 0 %}
+<section class="container" aria-labelledby="basics-title">
+  <div class="basics">
+    <div class="basics-head">
+      <p class="eyebrow">Neu hier?</p>
+      <h2 id="basics-title">Einstieg: <span class="grad">Die Grundlagen</span></h2>
+    </div>
+    <ol class="basics-list">
+      {%- for p in basics limit:3 %}
+      <li><a href="{{ p.url | relative_url }}"><span class="num">0{{ forloop.index }}</span><span class="txt"><strong>{{ p.title }}</strong><span>{{ p.description | truncate: 110 }}</span></span></a></li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+{%- endif %}
+
+{%- assign rest = site.posts | where_exp: "p", "p.url != newest.url" %}
+{%- if rest.size > 0 %}
+<section class="container" aria-labelledby="all-title">
+  <h2 class="section-title" id="all-title">Alle Artikel</h2>
+  {% include post-grid.html posts=rest id="alle" %}
+</section>
+{%- endif %}
+{%- else %}
+<section class="container"><p class="empty">Bald erscheinen hier die ersten Artikel.</p></section>
+{%- endif %}

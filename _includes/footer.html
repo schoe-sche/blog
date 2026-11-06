@@ -27,5 +27,12 @@
   function setMenu(o){menu.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Menü schliessen':'Menü öffnen')}
   burger.addEventListener('click',function(){setMenu(!menu.classList.contains('open'))});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classList.contains('open')){setMenu(false);burger.focus()}});
+  document.querySelectorAll('[data-more]').forEach(function(btn){
+    var list=document.getElementById(btn.getAttribute('data-more'));if(!list)return;
+    var size=parseInt(list.getAttribute('data-page-size'),10)||9,items=[].slice.call(list.children),shown=size;
+    function update(){items.forEach(function(li,i){li.hidden=i>=shown});btn.hidden=shown>=items.length}
+    btn.addEventListener('click',function(){var first=items[shown];shown+=size;update();if(first){var a=first.querySelector('a');if(a)a.focus()}});
+    update();
+  });
 })();
 </script>

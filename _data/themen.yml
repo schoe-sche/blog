@@ -1,0 +1,29 @@
+# Themen des Blogs. «name» muss exakt dem Tag in den Artikeln entsprechen.
+# Für jedes Thema gibt es eine Seite unter thema/<slug>.md – neue Themen dort ebenfalls anlegen.
+- name: Sicherheit
+  slug: sicherheit
+  intro: "Die häufigsten Risiken für KMU – Phishing, gestohlene Passwörter, Erpressungstrojaner – und was wirklich dagegen hilft. Praxisnah, ohne Angstmacherei."
+- name: Datenschutz
+  slug: datenschutz
+  intro: "Das Schweizer Datenschutzgesetz im KMU-Alltag: Was Sie wissen müssen, wo Ihre Daten liegen und wie Sie Pflichten mit vernünftigem Aufwand erfüllen."
+- name: Souveränität
+  slug: souveraenitaet
+  intro: "Wer hat Zugriff auf Ihre Daten, und könnten Sie morgen den Anbieter wechseln? Artikel über Unabhängigkeit, Kontrolle und IT, die Ihnen gehört."
+- name: Open Source
+  slug: open-source
+  intro: "Bewährte Open-Source-Lösungen für KMU: was sie können, wo sie an Grenzen stossen und worauf es im Betrieb ankommt."
+- name: Cloud
+  slug: cloud
+  intro: "Dateien, Kalender und Zusammenarbeit in der eigenen Cloud – bei Ihnen vor Ort oder im Schweizer Rechenzentrum."
+- name: E-Mail
+  slug: e-mail
+  intro: "E-Mail ist das Rückgrat der Geschäftskommunikation. Hier geht es um Sicherheit, Zustellbarkeit und eigene Mailserver."
+- name: Backup
+  slug: backup
+  intro: "Sicherungen, die einen Ernstfall wirklich überstehen: Strategien, Werkzeuge und regelmässige Tests."
+- name: Passkeys
+  slug: passkeys
+  intro: "Anmelden ohne Passwort: wie Passkeys funktionieren, warum sie Phishing ins Leere laufen lassen und wie Sie sie im Betrieb einführen."
+- name: Migration
+  slug: migration
+  intro: "Der Umstieg auf eigene Systeme ohne Stillstand: Planung, Parallelbetrieb und typische Stolpersteine."

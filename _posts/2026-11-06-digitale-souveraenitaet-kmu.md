@@ -2,6 +2,7 @@
 title: "Digitale Souveränität: Was das für ein Schweizer KMU konkret bedeutet"
 description: "Souveränität klingt nach Politik. Für ein KMU ist es eine ganz praktische Frage: Wer hat Zugriff auf Ihre Daten, und könnten Sie morgen den Anbieter wechseln?"
 tags: [Souveränität, Datenschutz, Open Source]
+grundlagen: true
 image: /assets/img/posts/digitale-souveraenitaet-kmu.jpg
 image_alt: "Symbol eines Hauses mit Server auf dunklem Netzwerk-Hintergrund"
 ---

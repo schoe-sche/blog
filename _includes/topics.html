@@ -1,0 +1,9 @@
+<nav class="topics" aria-label="Themen">
+  <a href="{{ '/' | relative_url }}"{% unless include.active %} aria-current="page"{% endunless %}>Alle <span>{{ site.posts.size }}</span></a>
+  {%- for t in site.data.themen %}
+    {%- assign n = site.tags[t.name] | size %}
+    {%- if n > 0 %}
+  <a href="{{ '/thema/' | append: t.slug | append: '/' | relative_url }}"{% if include.active == t.name %} aria-current="page"{% endif %}>{{ t.name }} <span>{{ n }}</span></a>
+    {%- endif %}
+  {%- endfor %}
+</nav>

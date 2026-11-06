@@ -26,6 +26,31 @@ Authentik, Pocket ID, Odoo), Anbieterwechsel und Migration, Betrieb vor Ort oder
 Aktuelle Anlässe (neue Sicherheitslücken mit Relevanz für KMU, Gesetzesänderungen, grössere Releases der genannten
 Software) sind willkommen, wenn sie für KMU praktisch relevant sind.
 
+## Themenvorrat
+
+Gibt es keinen aktuellen Anlass, wähle das erste noch nicht behandelte Thema aus dieser Liste (vorher `_posts/` und offene Pull Requests prüfen). Behandelte Themen hier abhaken (`- [x]`) – im selben Pull Request wie der Artikel.
+
+- [ ] Phishing erkennen: Die häufigsten Maschen und wie Sie sich schützen
+- [ ] Microsoft 365 oder eigene Cloud? Eine ehrliche Entscheidungshilfe
+- [ ] Odoo: ERP für KMU – von der Offerte bis zur Rechnung
+- [ ] Vor Ort oder im Schweizer Rechenzentrum? Die zwei Betriebsarten im Vergleich
+- [ ] Mitarbeitende verlassen die Firma: Die Checkliste für den IT-Austritt
+- [ ] Das Datenschutzgesetz (DSG) im KMU-Alltag: Die wichtigsten Pflichten
+- [ ] Updates: Warum «später» die teuerste Antwort ist
+- [ ] Datenpanne – was jetzt? Erste Schritte und Meldepflichten
+- [ ] Der Umzug in die eigene Cloud in 5 Schritten
+- [ ] Authentik oder Pocket ID: Welche Anmeldelösung passt?
+- [ ] Das Firmen-WLAN richtig absichern
+- [ ] Was kostet eine eigene IT wirklich? (ohne konkrete Preise)
+- [ ] Termine online buchen mit Nextcloud – ohne Doodle & Co.
+- [ ] Unraid als Server für kleine Büros (Hinweis: Unraid selbst ist kein Open Source)
+
+## Themen und Übersicht
+
+- Die Tags steuern die Themenseiten (`/blog/thema/<thema>/`) und die Filter in der Übersicht. Nur Tags aus der Liste verwenden; die Themen sind in `_data/themen.yml` definiert.
+- Der Tag an **erster** Stelle ist das Hauptthema: Danach richten sich die «Mehr zum Thema»-Vorschläge unter dem Artikel.
+- `grundlagen: true` im Front Matter setzt einen Artikel in den Bereich «Einstieg: Die Grundlagen» (max. 3). **Nicht** selbst setzen – das entscheidet Jorge.
+
 ## Regeln
 
 - **Fakten belegen.** Zahlen, Daten, Gesetzesartikel und Versionsangaben nur mit verlässlicher Quelle (Hersteller, Behörden wie NCSC/BACS, EDÖB, admin.ch, seriöse Fachmedien). Quellen am Ende unter `## Quellen` verlinken.
@@ -44,7 +69,7 @@ Dateiname: `_posts/JJJJ-MM-TT-kurzer-slug.md` (Slug klein, ohne Umlaute: ae/oe/u
 ---
 title: "Prägnanter Titel (max. ca. 70 Zeichen)"
 description: "Ein bis zwei Sätze, die neugierig machen (max. ca. 160 Zeichen) – erscheint in der Übersicht und bei Google."
-tags: [Sicherheit, Datenschutz]   # 1–3 Tags aus: Sicherheit, Datenschutz, Souveränität, Open Source, Backup, Passkeys, Migration, E-Mail, Cloud
+tags: [Sicherheit, Datenschutz]   # 1–3 Tags aus: Sicherheit, Datenschutz, Souveränität, Open Source, Backup, Passkeys, Migration, E-Mail, Cloud – Hauptthema zuerst
 image: /assets/img/posts/<slug>.jpg
 image_alt: "Kurze Beschreibung des Titelbilds"
 ---

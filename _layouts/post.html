@@ -9,7 +9,7 @@ layout: default
     <h1>{{ page.title }}</h1>
     {%- if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}
     <div class="meta">{% include date.html date=page.date %}<span>{{ minutes }} Min. Lesezeit</span><span>{{ page.author | default: site.author.name }}</span></div>
-    {%- if page.tags.size > 0 %}<div class="tags" style="margin-top:14px">{% for t in page.tags %}<span>{{ t }}</span>{% endfor %}</div>{% endif %}
+    {%- if page.tags.size > 0 %}<div class="tags" style="margin-top:14px">{% for t in page.tags %}{% assign th = site.data.themen | where: "name", t | first %}{% if th %}<a href="{{ '/thema/' | append: th.slug | append: '/' | relative_url }}">{{ t }}</a>{% else %}<span>{{ t }}</span>{% endif %}{% endfor %}</div>{% endif %}
   </div>
 
   {%- if page.image %}
@@ -31,12 +31,22 @@ layout: default
     </aside>
   </div>
 
-  {%- assign others = site.posts | where_exp: "p", "p.url != page.url" -%}
+  {%- assign t0 = page.tags | first %}
+  {%- assign same = site.posts | where_exp: "p", "p.url != page.url" | where_exp: "p", "p.tags contains t0" %}
+  {%- assign others = site.posts | where_exp: "p", "p.url != page.url" %}
   {%- if others.size > 0 %}
   <section class="container more-posts" aria-labelledby="more-title">
-    <h2 id="more-title">Weitere Artikel</h2>
+    <h2 id="more-title">{% if same.size > 0 %}Mehr zum Thema {{ t0 }}{% else %}Weitere Artikel{% endif %}</h2>
     <ul class="posts">
-      {%- for p in others limit:3 %}{% include post-card.html post=p %}{% endfor %}
+      {%- assign shown = 0 %}
+      {%- for p in same limit:3 %}{% include post-card.html post=p %}{% assign shown = shown | plus: 1 %}{% endfor %}
+      {%- if shown < 3 %}
+        {%- for p in others %}
+          {%- unless p.tags contains t0 %}
+            {%- if shown < 3 %}{% include post-card.html post=p %}{% assign shown = shown | plus: 1 %}{% endif %}
+          {%- endunless %}
+        {%- endfor %}
+      {%- endif %}
     </ul>
   </section>
   {%- endif %}

@@ -1,0 +1,29 @@
+---
+layout: default
+---
+{%- assign t = site.data.themen | where: "name", page.tag | first %}
+{%- assign posts = site.tags[page.tag] %}
+<section class="container blog-hero">
+  <p class="eyebrow"><a href="{{ '/' | relative_url }}">Blog</a> · Thema</p>
+  <h1>{{ page.tag }}</h1>
+  {%- if t.intro %}<p class="lede">{{ t.intro }}</p>{% endif %}
+  {% include topics.html active=page.tag %}
+</section>
+
+<section class="container" aria-label="Artikel zum Thema {{ page.tag }}">
+  {%- if posts and posts.size > 0 %}
+  {% include post-grid.html posts=posts id="thema" %}
+  {%- else %}
+  <p class="empty">Zu diesem Thema erscheinen bald die ersten Artikel. <a href="{{ '/' | relative_url }}">Zu allen Artikeln</a></p>
+  {%- endif %}
+</section>
+
+<section class="narrow">
+  <aside class="cta" aria-labelledby="cta-title">
+    <h2 id="cta-title">Fragen zu «{{ page.tag }}» in Ihrem Betrieb?</h2>
+    <p>Im kostenlosen Erstgespräch klären wir in 30 Minuten, wo Sie stehen und welche nächsten Schritte für Sie sinnvoll sind – unverbindlich, per Videocall.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="{{ site.booking_url }}" target="_blank" rel="noopener">Termin online buchen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </aside>
+</section>
