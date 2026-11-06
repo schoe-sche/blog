@@ -38,7 +38,7 @@ description: Praxiswissen zu sicherer, souveräner IT mit Open Source – verst�
     </div>
     <ol class="basics-list">
       {%- for p in basics limit:3 %}
-      <li><a href="{{ p.url | relative_url }}"><span class="num">0{{ forloop.index }}</span><span class="txt"><strong>{{ p.title }}</strong><span>{{ p.description | truncate: 110 }}</span></span></a></li>
+      <li><a href="{{ p.url | relative_url }}"><span class="num">0{{ forloop.index }}</span><span class="txt"><strong>{{ p.title }}</strong><span>{{ p.description | truncatewords: 14, ' …' }}</span></span></a></li>
       {%- endfor %}
     </ol>
   </div>
