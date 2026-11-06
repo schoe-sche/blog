@@ -66,6 +66,14 @@ Dieser Vorfall ist kein Argument gegen Nextcloud oder Open Source. Der Fehler wu
 - **Updates nicht aufschieben.** Die Korrektur war Wochen vor der offiziellen Meldung verfügbar. Wer Updates regelmässig und zeitnah einspielt, war früh geschützt.
 - **Bequem ist nicht immer robust.** Der eingebaute Office-Server ist praktisch für den Einstieg. Für den produktiven Betrieb ist ein eigenständiger, sauber getrennter Office-Server oft die solidere Wahl.
 
+## Die Alternative: Euro-Office
+
+Wer den eingebauten Office-Server entfernt, möchte Dokumente trotzdem im Browser bearbeiten. Neben einem eigenständigen Collabora-Server gibt es dafür seit diesem Jahr eine weitere Möglichkeit: **Euro-Office**. Die Open-Source-Office-Suite wurde am 9. Juni 2026 lanciert und ist seit Nextcloud Hub 26 Spring als Option in Nextcloud Office verfügbar. Entwickelt wird sie von einem europäischen Bündnis, zu dem unter anderem Nextcloud, IONOS und Open-Xchange gehören.
+
+Euro-Office ist auf die Microsoft-Formate DOCX, XLSX und PPTX ausgerichtet, kann aber auch OpenDocument-Dateien öffnen. Für Teams, die viel mit Word- und Excel-Dateien von Kunden oder Lieferanten arbeiten, ist das ein praktischer Vorteil. Auch PDF-Dateien lassen sich direkt bearbeiten.
+
+Für neue Installationen empfehlen wir bei TUXO Euro-Office. Wichtig zu wissen: Auch Euro-Office braucht einen eigenen Dokumentenserver, der neben Nextcloud läuft, und die Integration setzt Nextcloud 34 oder neuer voraus. Das ist etwas mehr Aufwand als eine Ein-Klick-App, trennt aber den Office-Dienst sauber von Nextcloud – genau die Trennung, die im vorliegenden Fall gefehlt hat.
+
 Eine eigene Cloud bringt Ihnen Kontrolle über Ihre Daten. Diese Kontrolle bedeutet aber auch Verantwortung für Pflege und Überwachung. Wenn Sie unsicher sind, ob Ihre Nextcloud-Installation betroffen ist oder wie regelmässige Updates bei Ihnen organisiert sind, unterstützen wir Sie bei TUXO gerne bei der Prüfung.
 
 ## Quellen
@@ -75,3 +83,6 @@ Eine eigene Cloud bringt Ihnen Kontrolle über Ihre Daten. Diese Kontrolle bedeu
 - [CISA: CISA Adds One Known Exploited Vulnerability to Catalog (23.10.2026)](https://content.govdelivery.com/accounts/USDHSCISA/bulletins/4304abd)
 - [Secure.com: CVE-2026-110447 – Zeitablauf und Hinweise zur Spurensuche (24.10.2026)](https://www.secure.com/news/collabora-nextcloud-cve-2026-110447-exploited)
 - [Windows-FAQ: Nextcloud-Sicherheitslücke CVE-2026-110447 (24.10.2026)](https://www.windows-faq.de/2026/10/24/nextcloud-sicherheitsluecke-cve-2026-110447/)
+- [Nextcloud: Nextcloud Office powered by Euro-Office](https://nextcloud.com/office/)
+- [Nextcloud: Hub 26 Summer – Euro-Office kommt auf den Desktop (16.09.2026)](https://nextcloud.com/blog/press_releases/hub-26-summer/)
+- [Euro-Office-Dokumentation: Integration in Nextcloud](https://euro-office.github.io/documentation/integration/nextcloud/)
