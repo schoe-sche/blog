@@ -2,6 +2,8 @@
 title: "Nextcloud: Kritische Lücke im eingebauten Office-Server – jetzt prüfen"
 description: "Über die App «Collabora Online – Built-in CODE Server» wurden Nextcloud-Server angegriffen. So prüfen Sie rasch, ob Ihre Installation betroffen ist."
 tags: [Sicherheit, Open Source, Cloud]
+image: /assets/img/posts/nextcloud-collabora-built-in-luecke.jpg
+image_alt: "Warnsymbol auf dunklem Netzwerk-Hintergrund"
 ---
 
 Nextcloud ist für viele KMU der zentrale Ort für Dateien, Kalender und Kontakte. Wer Dokumente direkt im Browser bearbeiten möchte, aktiviert dafür oft eine bequeme Zusatz-App: den «Collabora Online – Built-in CODE Server». In genau dieser App wurde eine kritische Sicherheitslücke gefunden – und sie wurde bereits aktiv ausgenutzt, bevor sie offiziell bekannt war.
