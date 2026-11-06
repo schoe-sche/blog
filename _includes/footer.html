@@ -1,0 +1,31 @@
+<footer>
+  <div class="container">
+    <div class="foot">
+      <a href="/" aria-label="TUXO – zur Startseite">
+        <img class="logo-dark" src="{{ '/assets/brand-d/logo-claim-white.svg' | relative_url }}" alt="TUXO – Ihre IT. Ihre Daten." width="144" height="46">
+        <img class="logo-light" src="{{ '/assets/brand-d/logo-claim.svg' | relative_url }}" alt="TUXO – Ihre IT. Ihre Daten." width="144" height="46">
+      </a>
+      <nav aria-label="Fusszeile">
+        <a href="/">Startseite</a>
+        <a href="{{ '/' | relative_url }}">Blog</a>
+        <a href="{{ '/feed.xml' | relative_url }}">RSS-Feed</a>
+        <a href="/#kontakt">Kontakt</a>
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
+    <p class="copy">© {{ site.time | date: '%Y' }} TUXO · tuxo.ch</p>
+  </div>
+</footer>
+<script>
+(function(){
+  var root=document.documentElement,toggle=document.getElementById('themeToggle');
+  function apply(t,persist){var b=t==='bright';root.setAttribute('data-theme',b?'bright':'dark');toggle.setAttribute('aria-pressed',String(b));if(persist){try{localStorage.setItem('tuxo-theme',b?'bright':'dark')}catch(e){}}}
+  toggle.addEventListener('click',function(){apply(root.getAttribute('data-theme')==='dark'?'bright':'dark',true)});
+  apply(root.getAttribute('data-theme'),false);
+  var burger=document.querySelector('.burger'),menu=document.getElementById('menu');
+  function setMenu(o){menu.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Menü schliessen':'Menü öffnen')}
+  burger.addEventListener('click',function(){setMenu(!menu.classList.contains('open'))});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classList.contains('open')){setMenu(false);burger.focus()}});
+})();
+</script>

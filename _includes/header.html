@@ -1,0 +1,27 @@
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header>
+  <nav class="container nav" aria-label="Hauptnavigation">
+    <a href="/" class="brand" aria-label="TUXO – zur Startseite">
+      <img class="logo-dark" src="{{ '/assets/brand-d/logo-horizontal-white.svg' | relative_url }}" alt="" width="119" height="38">
+      <img class="logo-light" src="{{ '/assets/brand-d/logo-horizontal.svg' | relative_url }}" alt="" width="119" height="38">
+      <span class="sub">Blog</span>
+    </a>
+    <ul class="menu" id="menu">
+      <li><a href="/#leistungen">Beratung</a></li>
+      <li><a href="/#loesungen">Lösungen</a></li>
+      <li><a href="/#sicherheit">Sicherheit</a></li>
+      <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Blog</a></li>
+      <li><a href="{{ site.booking_url }}" target="_blank" rel="noopener" class="btn btn-primary">Erstgespräch</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" title="Hell / Dunkel">
+        <span class="visually-hidden">Heller Modus</span>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+      <button class="burger" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,19 @@
+---
+layout: default
+description: Praxiswissen zu sicherer, souveräner IT mit Open Source – verständlich erklärt für Schweizer KMU und Privatpersonen.
+---
+<section class="container blog-hero">
+  <p class="eyebrow">Blog</p>
+  <h1>Sichere, souveräne IT –<br><span class="grad">verständlich erklärt.</span></h1>
+  <p class="lede">Praxiswissen zu Datenschutz, Sicherheit und Open Source für Schweizer KMU und Privatpersonen. Ohne Fachchinesisch, mit konkreten nächsten Schritten.</p>
+</section>
+
+<section class="container" aria-label="Artikel">
+  {%- if site.posts.size > 0 %}
+  <ul class="posts">
+    {%- for post in site.posts %}{% include post-card.html post=post %}{% endfor %}
+  </ul>
+  {%- else %}
+  <p class="empty">Bald erscheinen hier die ersten Artikel.</p>
+  {%- endif %}
+</section>

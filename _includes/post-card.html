@@ -1,0 +1,16 @@
+{%- assign words = include.post.content | strip_html | number_of_words -%}
+{%- assign minutes = words | divided_by: 200 | plus: 1 -%}
+<li>
+  <a class="post-card" href="{{ include.post.url | relative_url }}">
+    <span class="bar" aria-hidden="true"></span>
+    <span class="body">
+      <span class="meta">{% include date.html date=include.post.date %}<span>{{ minutes }} Min. Lesezeit</span></span>
+      <h2>{{ include.post.title }}</h2>
+      <p>{{ include.post.description }}</p>
+      {%- if include.post.tags.size > 0 %}
+      <span class="tags">{% for t in include.post.tags limit:3 %}<span>{{ t }}</span>{% endfor %}</span>
+      {%- endif %}
+      <span class="more">Weiterlesen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </span>
+  </a>
+</li>

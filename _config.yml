@@ -1,0 +1,38 @@
+title: TUXO Blog
+description: Praxiswissen zu sicherer, souveräner IT mit Open Source – für Schweizer KMU und Privatpersonen.
+url: "https://tuxo.ch"
+baseurl: "/blog"
+lang: de-CH
+locale: de_CH
+timezone: Europe/Zurich
+author:
+  name: Jorge Botelho
+  url: https://tuxo.ch
+booking_url: https://cloud.tuxo.ch/apps/calendar/appointment/ax2tsbyRst8t
+logo: /assets/brand-d/logo-claim.svg
+
+permalink: /:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  smart_quotes: ["lsaquo", "rsaquo", "laquo", "raquo"]   # Schweizer Anführungszeichen «…» und ‹…›
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+
+exclude:
+  - README.md
+  - REDAKTION.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

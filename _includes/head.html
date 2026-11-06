@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script>
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem('tuxo-theme'); } catch (e) {}
+    var theme = saved === 'bright' || saved === 'dark' ? saved
+      : (window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'bright' : 'dark');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% seo title=false %}
+<title>{% if page.title %}{{ page.title }} | TUXO Blog{% else %}TUXO Blog – sichere, souveräne IT mit Open Source{% endif %}</title>
+<meta name="theme-color" content="#081018" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7faf9" media="(prefers-color-scheme: light)">
+<link rel="icon" href="{{ '/assets/brand-d/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
+<link rel="preload" href="{{ '/assets/fonts/sora-600.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/inter-400.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
+{% feed_meta %}
