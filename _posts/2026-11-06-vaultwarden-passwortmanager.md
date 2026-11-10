@@ -45,7 +45,7 @@ Gerade weil hier die wichtigsten Daten liegen, verdient der Betrieb besondere So
 1. **Nur über HTTPS.** Die Web-Oberfläche funktioniert ohnehin nur über eine verschlüsselte Verbindung. Ein sauber eingerichteter Reverse Proxy mit gültigem Zertifikat gehört dazu.
 2. **Registrierung schliessen.** Neue Konten sollten nur auf Einladung entstehen, nicht durch freie Anmeldung.
 3. **Verwaltungsseite schützen.** Die Admin-Oberfläche wird mit einem starken, getrennt aufbewahrten Token gesichert oder ganz deaktiviert.
-4. **Backups, Backups, Backups.** Die Entwickler empfehlen ausdrücklich regelmässige Sicherungen von Dateien und Datenbank. Ein verlorener Passwort-Tresor ist der denkbar schlechteste Datenverlust.
+4. **Backups, Backups, Backups.** Die Entwickler empfehlen ausdrücklich regelmässige Sicherungen von Dateien und Datenbank. Ein verlorener Passwort-Tresor ist der denkbar schlechteste Datenverlust. Mehr dazu im Artikel zur [3-2-1-Regel](/blog/backup-3-2-1-regel/).
 5. **Updates zeitnah einspielen.** Wie bei jeder Software, die aus dem Internet erreichbar ist.
 
 <div class="box" markdown="1">

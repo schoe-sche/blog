@@ -47,7 +47,7 @@ Klären Sie mit Ihrer Treuhänderin oder Ihrem Treuhänder, welche Dokumente Sie
 
 - **Backups:** Das Archiv enthält Ihre wichtigsten Dokumente über viele Jahre. Tägliche, verschlüsselte Sicherungen mit einer Kopie ausser Haus sind Pflicht.
 - **Zugriffsrechte:** Nicht jede Person muss jeden Lohnausweis sehen. Paperless-ngx kennt Benutzer, Gruppen und Berechtigungen pro Dokument.
-- **Zentrale Anmeldung:** Paperless-ngx lässt sich an eine Anmeldelösung mit Passkeys anbinden – so entfällt ein weiteres Passwort.
+- **Zentrale Anmeldung:** Paperless-ngx lässt sich an eine Anmeldelösung mit Passkeys anbinden, etwa an [Pocket ID](/blog/pocket-id-anmeldung-mit-passkey/) – so entfällt ein weiteres Passwort.
 - **Updates:** wie bei jeder Software regelmässig und mit Backup davor.
 
 ## So starten Sie
@@ -62,6 +62,6 @@ Paperless-ngx ist eines dieser Werkzeuge, die man nach wenigen Wochen nicht mehr
 ## Quellen
 
 - [Paperless-ngx – Dokumentation](https://docs.paperless-ngx.com)
-- [Paperless-ngx – Projektbeschreibung (Funktionen, Lizenz, Datenspeicherung)](https://sourceforge.net/projects/paperless-ngx.mirror/)
-- [Art. 958f OR – Aufbewahrung und Edition](https://justement.ch/de/doc/act/ch/220/div_3/tit_32/chap_1/art_958_f)
+- [Paperless-ngx auf GitHub (Funktionen, Lizenz)](https://github.com/paperless-ngx/paperless-ngx)
+- [Art. 958f OR – Aufbewahrung und Edition (Fedlex)](https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_958_f)
 - [KMU-Portal des Bundes: Elektronische Aufbewahrung der Geschäftsbücher](https://www.kmu.admin.ch/kmu/de/home/praktisches-wissen/finanzielles/buchhaltung-und-revision/elektronische-aufbewahrung-der-geschaeftsbuecher.html)
