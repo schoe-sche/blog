@@ -32,7 +32,7 @@ Gibt es keinen aktuellen Anlass, wähle das erste noch nicht behandelte Thema au
 
 - [ ] Phishing erkennen: Die häufigsten Maschen und wie Sie sich schützen
 - [ ] Microsoft 365 oder eigene Cloud? Eine ehrliche Entscheidungshilfe
-- [ ] Odoo: ERP für KMU – von der Offerte bis zur Rechnung
+- [x] Odoo: ERP für KMU – von der Offerte bis zur Rechnung
 - [ ] Vor Ort oder im Schweizer Rechenzentrum? Die zwei Betriebsarten im Vergleich
 - [ ] Mitarbeitende verlassen die Firma: Die Checkliste für den IT-Austritt
 - [ ] Das Datenschutzgesetz (DSG) im KMU-Alltag: Die wichtigsten Pflichten
@@ -90,6 +90,8 @@ Optionaler hervorgehobener Kasten.
 ```
 
 Der Kasten (`<div class="box" markdown="1">`) und Tabellen sind erlaubt. Keine eigenen Stile, kein JavaScript.
+
+Verweise auf andere Artikel des Blogs so schreiben: `[Linktext](/blog/<slug>/)`.
 
 ## Titelbild (Pflicht)
 

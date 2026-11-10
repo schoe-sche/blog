@@ -29,7 +29,7 @@ Der wichtigste Vorteil ist nicht eine einzelne Funktion, sondern die **Kontrolle
 - **Sie wissen, wo die Daten liegen.** Das erleichtert den Nachweis gegenüber dem Schweizer Datenschutzgesetz und gegenüber Kunden, die danach fragen.
 - **Keine Abhängigkeit von Lizenzmodellen.** Die Software ist Open Source. Kosten entstehen für Server, Betrieb und auf Wunsch für einen Supportvertrag – nicht pro Funktion, die ein Hersteller freischaltet.
 - **Offene Formate.** Ihre Dateien bleiben normale Dateien. Ein Umzug auf einen anderen Server oder zu einem anderen Betreuer ist jederzeit möglich.
-- **Eine Anmeldung für alles.** Nextcloud lässt sich an eine zentrale Anmeldelösung mit Passkeys anbinden, etwa [Pocket ID](https://pocket-id.org) oder Authentik.
+- **Eine Anmeldung für alles.** Nextcloud lässt sich an eine zentrale Anmeldelösung mit Passkeys anbinden, etwa [Pocket ID](/blog/pocket-id-anmeldung-mit-passkey/) oder Authentik.
 
 Für besonders heikle Ordner bietet Nextcloud zusätzlich eine **Ende-zu-Ende-Verschlüsselung**: Die Daten werden schon auf dem Gerät verschlüsselt, sodass selbst der Server sie nicht lesen kann. Das ist eine Option für einzelne Ordner, nicht der Normalfall – denn verschlüsselte Ordner lassen sich zum Beispiel nicht im Browser bearbeiten.
 
@@ -38,7 +38,7 @@ Für besonders heikle Ordner bietet Nextcloud zusätzlich eine **Ende-zu-Ende-Ve
 Eine eigene Cloud ist nur so gut wie ihr Betrieb. Vier Punkte entscheiden darüber, ob Nextcloud zuverlässig und sicher läuft:
 
 1. **Updates.** Nextcloud erscheint regelmässig in neuen Versionen, dazu kommen Sicherheitsupdates für Server und Apps. Diese sollten zeitnah eingespielt werden – geplant und mit Backup davor.
-2. **Backups.** Täglich, verschlüsselt, mindestens eine Kopie ausser Haus – und regelmässig getestet. Die Installationsvariante [Nextcloud All-in-One](https://github.com/nextcloud/all-in-one) bringt dafür bereits eine integrierte Sicherung mit.
+2. **Backups.** Täglich, verschlüsselt, mindestens eine Kopie ausser Haus – und regelmässig getestet, wie es die [3-2-1-Regel](/blog/backup-3-2-1-regel/) vorsieht. Die Installationsvariante [Nextcloud All-in-One](https://github.com/nextcloud/all-in-one) bringt dafür bereits eine integrierte Sicherung mit.
 3. **Wenige, bewusst gewählte Apps.** Jede Erweiterung vergrössert die Angriffsfläche. Installieren Sie nur, was Sie wirklich nutzen, und entfernen Sie, was nicht mehr gebraucht wird.
 4. **Überwachung.** Die Verwaltungsoberfläche zeigt Warnungen und Sicherheitshinweise an. Jemand sollte sie regelmässig lesen.
 

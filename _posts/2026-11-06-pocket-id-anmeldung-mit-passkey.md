@@ -12,7 +12,7 @@ Grosse Unternehmen lösen das mit einer **zentralen Anmeldung**, auch «Single S
 
 ## Was ist Pocket ID?
 
-Pocket ID ist eine Open-Source-Anmeldelösung (Lizenz BSD-2-Clause), die Sie auf Ihrem eigenen Server betreiben. Das Besondere: Sie funktioniert **ausschliesslich mit Passkeys**. Es gibt kein Passwort, das gestohlen, erraten oder in einer Phishing-Mail abgefragt werden könnte.
+Pocket ID ist eine Open-Source-Anmeldelösung (Lizenz BSD-2-Clause), die Sie auf Ihrem eigenen Server betreiben. Das Besondere: Sie funktioniert **ausschliesslich mit Passkeys**. Es gibt kein Passwort, das gestohlen, erraten oder in einer Phishing-Mail abgefragt werden könnte. Wie Passkeys funktionieren, erklärt der Artikel [Passkeys statt Passwörter](/blog/passkeys-statt-passwoerter/).
 
 Technisch ist Pocket ID ein sogenannter OIDC-Anbieter. **OIDC** (OpenID Connect) ist ein offener Standard, den viele Anwendungen verstehen – darunter Nextcloud, Paperless-ngx, zahlreiche Webanwendungen und auch viele kommerzielle Dienste. Die Anwendung fragt nicht mehr selbst nach einem Passwort, sondern leitet zur Anmeldung an Pocket ID weiter.
 
@@ -37,7 +37,7 @@ Für grössere Umgebungen kann Pocket ID laut Dokumentation Benutzer auch aus ei
 
 ## Beispiel: Nextcloud mit Pocket ID
 
-Die Anbindung an Nextcloud ist ein typischer Einstieg. In Nextcloud wird dafür die offizielle App «OpenID Connect user backend» (`user_oidc`) installiert, in Pocket ID ein passender Eintrag angelegt. Auf Wunsch übernimmt Nextcloud sogar die Gruppen aus Pocket ID, sodass Freigaben automatisch zur Teamstruktur passen.
+Die Anbindung an [Nextcloud](/blog/nextcloud-eigene-cloud/) ist ein typischer Einstieg. In Nextcloud wird dafür die offizielle App «OpenID Connect user backend» (`user_oidc`) installiert, in Pocket ID ein passender Eintrag angelegt. Auf Wunsch übernimmt Nextcloud sogar die Gruppen aus Pocket ID, sodass Freigaben automatisch zur Teamstruktur passen.
 
 <div class="box" markdown="1">
 **Hinweis aus der Praxis**
@@ -58,11 +58,11 @@ Eine zentrale Anmeldung ist ein zentraler Baustein – entsprechend sorgfältig 
 
 Schon ab drei, vier Mitarbeitenden und einer Handvoll Anwendungen spart eine zentrale Anmeldung spürbar Zeit – beim Einrichten neuer Mitarbeitender, beim Austritt und im Alltag. Vor allem aber schliesst sie das häufigste Einfallstor überhaupt: gestohlene Passwörter.
 
-Wer schon eigene Systeme wie Nextcloud oder einen Passwortmanager betreibt, macht mit Pocket ID den logischen nächsten Schritt.
+Wer schon eigene Systeme wie Nextcloud oder einen [Passwortmanager](/blog/vaultwarden-passwortmanager/) betreibt, macht mit Pocket ID den logischen nächsten Schritt.
 
 ## Quellen
 
 - [Pocket ID – offizielle Website und Dokumentation](https://pocket-id.org)
 - [Pocket ID: Anbindung an Nextcloud](https://pocket-id.org/docs/client-examples/nextcloud)
 - [Pocket ID: Zugriff über Benutzergruppen steuern](https://pocket-id.org/docs/configuration/allowed-groups)
-- [Pocket ID – Projektübersicht (Lizenz, Beschreibung)](https://awesome.ecosyste.ms/projects/github.com%2Fpocket-id%2Fpocket-id)
+- [Pocket ID auf GitHub (Lizenz, Beschreibung)](https://github.com/pocket-id/pocket-id)

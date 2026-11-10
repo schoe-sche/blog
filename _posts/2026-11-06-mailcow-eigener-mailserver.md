@@ -37,7 +37,7 @@ Bei E-Mail genügt es nicht, dass der Server läuft. Andere Mailserver müssen I
 2. **Einen passenden Reverse-DNS-Eintrag (PTR).** Die IP-Adresse muss auf den Namen des Mailservers zurückverweisen.
 3. **SPF, DKIM und DMARC.** Diese DNS-Einträge belegen, dass Ihr Server im Namen Ihrer Domain senden darf, und schützen gleichzeitig davor, dass Betrüger Ihre Absenderadresse missbrauchen. Mailcow zeigt die nötigen Einträge in der Verwaltung an.
 4. **Laufende Überwachung.** Steht der Server auf einer Sperrliste? Laufen die Zertifikate ab? Ist die Festplatte voll? Das muss jemand im Blick behalten.
-5. **Verlässliche Backups.** Ein verlorenes Postfach ist oft unersetzlich.
+5. **Verlässliche Backups.** Ein verlorenes Postfach ist oft unersetzlich. Wie eine solide Sicherung aussieht, zeigt der Artikel zur [3-2-1-Regel](/blog/backup-3-2-1-regel/).
 
 <div class="box" markdown="1">
 **Hinweis aus der Praxis**
