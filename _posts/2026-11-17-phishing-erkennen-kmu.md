@@ -48,7 +48,7 @@ Für Ihr Team bewährt sich eine einfache Abmachung: Wer bei einer Nachricht ein
 
 Aufmerksamkeit ist wichtig, aber Technik kann einen Teil der Last abnehmen:
 
-- **Passkeys statt Passwörter:** Ein Passkey ist an die echte Website gebunden und lässt sich auf einer gefälschten Seite gar nicht eingeben. Mehr dazu im Artikel [Passkeys: Warum Passwörter im KMU ausgedient haben](/blog/passkeys-statt-passwoerter/).
+- **Passkeys statt Passwörter:** Ein Passkey ist an die echte Website gebunden und lässt sich auf einer gefälschten Seite gar nicht eingeben. Mehr dazu im Artikel [Passkeys: Warum Passwörter im KMU ausgedient haben](/blog/passkeys-statt-passwoerter/); wie die Adressprüfung funktioniert, zeigt der interaktive [Passkey-Guide](/blog/passkeys/).
 - **Ein Passwortmanager:** Er füllt Zugangsdaten nur auf der Adresse aus, für die sie gespeichert sind. Bleibt das Feld leer, ist das ein deutlicher Hinweis, dass etwas nicht stimmt. Siehe [Vaultwarden: Ein Passwortmanager für das ganze Team](/blog/vaultwarden-passwortmanager/).
 - **Zwei-Faktor-Anmeldung:** Das BACS nennt sie ausdrücklich als technische Schutzmassnahme. Selbst wenn ein Passwort abgegriffen wird, reicht es allein nicht für den Zugang.
 - **Eine eigene, offizielle Website:** Für Firmen mit wenig Online-Präsenz empfiehlt das BACS mindestens eine einfache offizielle Website als Kontaktpunkt. Das erschwert es Betrügern, sich als Ihre Firma auszugeben. Suchen Sie zudem ab und zu nach Ihrem Firmennamen, um Missbrauch früh zu bemerken.

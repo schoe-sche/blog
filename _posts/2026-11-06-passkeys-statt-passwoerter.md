@@ -17,6 +17,12 @@ Ein Passkey ersetzt das Passwort durch ein Schlüsselpaar. Der **private Schlüs
 
 Im Alltag merken Sie davon wenig. Sie melden sich an, und statt ein Passwort zu tippen, bestätigen Sie mit Fingerabdruck, Gesichtserkennung oder der PIN Ihres Geräts. Fertig.
 
+<div class="box" markdown="1">
+**Selbst ausprobieren**
+
+Im interaktiven [Passkey-Guide](/blog/passkeys/) sehen Sie Schritt für Schritt, wie eine Anmeldung mit Passkey abläuft, testen den Schutz vor gefälschten Seiten und legen einen Übungs-Passkey an – in etwa zehn Minuten.
+</div>
+
 ## Warum Passkeys sicherer sind
 
 - **Nichts zum Abfangen.** Es gibt kein Passwort, das jemand mitlesen, erraten oder aus einem Datenleck kaufen könnte.

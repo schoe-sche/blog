@@ -12,7 +12,7 @@ Grosse Unternehmen lösen das mit einer **zentralen Anmeldung**, auch «Single S
 
 ## Was ist Pocket ID?
 
-Pocket ID ist eine Open-Source-Anmeldelösung (Lizenz BSD-2-Clause), die Sie auf Ihrem eigenen Server betreiben. Das Besondere: Sie funktioniert **ausschliesslich mit Passkeys**. Es gibt kein Passwort, das gestohlen, erraten oder in einer Phishing-Mail abgefragt werden könnte. Wie Passkeys funktionieren, erklärt der Artikel [Passkeys statt Passwörter](/blog/passkeys-statt-passwoerter/).
+Pocket ID ist eine Open-Source-Anmeldelösung (Lizenz BSD-2-Clause), die Sie auf Ihrem eigenen Server betreiben. Das Besondere: Sie funktioniert **ausschliesslich mit Passkeys**. Es gibt kein Passwort, das gestohlen, erraten oder in einer Phishing-Mail abgefragt werden könnte. Wie Passkeys funktionieren, erklärt der Artikel [Passkeys statt Passwörter](/blog/passkeys-statt-passwoerter/); zum Ausprobieren gibt es den interaktiven [Passkey-Guide](/blog/passkeys/).
 
 Technisch ist Pocket ID ein sogenannter OIDC-Anbieter. **OIDC** (OpenID Connect) ist ein offener Standard, den viele Anwendungen verstehen – darunter Nextcloud, Paperless-ngx, zahlreiche Webanwendungen und auch viele kommerzielle Dienste. Die Anwendung fragt nicht mehr selbst nach einem Passwort, sondern leitet zur Anmeldung an Pocket ID weiter.
 
