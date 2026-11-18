@@ -17,11 +17,15 @@ npm run build   # schreibt nach ../../passkeys
 
 | Pfad | Inhalt |
 |---|---|
-| `src/App.jsx` | Rahmen: Kopfzeile, Schritt-Leiste, Navigation über `#schritt-1` … `#schritt-6` |
+| `src/App.jsx` | Rahmen: Kopfzeile, Startbereich, Schritt-Leiste, Navigation über `#schritt-1` … `#schritt-6` |
+| `src/Handshake.jsx` | animierte Anmelde-Szene (Startbereich und Schritt 1) |
 | `src/components.jsx` | gemeinsame Bausteine (Schrittkopf, Kasten, Weiter/Zurück) |
 | `src/steps/` | ein Lernschritt pro Datei |
 | `src/data/` | reine Texte: Schrittnamen, Szenarien (Schritt 5), Checkliste (Schritt 6) |
 | `src/webauthn.js` | Übungs-Passkey anlegen und anmelden – ohne Server, nichts wird übertragen |
 | `src/styles.css` | Farben und Schriften im TUXO-Stil; Hell/Dunkel wie im Blog (`tuxo-theme`) |
+| `src/redesign.css` | Animationen und Layout von Startbereich, Stepper und Szenen |
+
+Animationen mit [Framer Motion](https://www.framer.com/motion/). Wer im System «Bewegung reduzieren» eingestellt hat, sieht die Seite ohne Animationen (`MotionConfig reducedMotion="user"`).
 
 Für die Texte gelten die Regeln aus [REDAKTION.md](../../REDAKTION.md): Sie-Form, «ss» statt «ß», keine Preise.
