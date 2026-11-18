@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8">
+  <script>
+    /* Gleiche Hell/Dunkel-Wahl wie im Blog (gemeinsamer Schlüssel tuxo-theme) */
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('tuxo-theme'); } catch (e) {}
+      var theme = saved === 'bright' || saved === 'dark' ? saved
+        : (window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'bright' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Passkeys verstehen – interaktiver Lernguide | TUXO</title>
+  <link rel="canonical" href="https://tuxo.ch/blog/passkeys/">
+  <link rel="icon" href="/blog/assets/brand-d/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#081018" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f7faf9" media="(prefers-color-scheme: light)">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_CH">
+  <meta property="og:site_name" content="TUXO">
+  <meta property="og:title" content="Passkeys verstehen – der interaktive Lernguide von TUXO">
+  <meta property="og:url" content="https://tuxo.ch/blog/passkeys/">
+  <meta property="og:image" content="https://tuxo.ch/blog/assets/img/posts/passkeys-statt-passwoerter.jpg">
+  <meta property="og:description" content="Was Passkeys sind, warum sie vor Phishing schützen und wie Sie sie in Ihrem KMU einführen – in sechs interaktiven Schritten.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="description" content="Interaktiver Lernguide: Was Passkeys sind, warum sie vor Phishing schützen und wie Sie sie in Ihrem KMU einführen.">
+</head>
+<body>
+  <div id="root"></div>
+  <noscript>Bitte aktivieren Sie JavaScript, um den interaktiven Guide zu nutzen.</noscript>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
