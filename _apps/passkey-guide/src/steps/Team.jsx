@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { StepHead, Panel, StepFoot } from '../components.jsx';
 import { CHECKLIST } from '../data/checklist.js';
 import { BOOKING_URL, BLOG } from '../config.js';
@@ -17,16 +18,23 @@ export default function Team() {
       <StepHead n={6} title="Passkeys im Team einführen">Eine Checkliste für den Start. Ihr Fortschritt wird nur in diesem Browser gespeichert.</StepHead>
       <div className="grid2">
         <div className="panel">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 12 }}>
-            <h3>Ihr Fortschritt</h3><span className="mono" style={{ color: 'var(--muted)', fontSize: 13 }}>{n} von {CHECKLIST.length}</span>
+          <div className="prog">
+            <svg viewBox="0 0 64 64" className="ring" aria-hidden="true">
+              <circle cx="32" cy="32" r="27" className="sc-track" />
+              <motion.circle cx="32" cy="32" r="27" className="sc-ring" style={{ rotate: -90, transformOrigin: '32px 32px' }}
+                initial={false} animate={{ pathLength: n / CHECKLIST.length }} transition={{ type: 'spring', stiffness: 90, damping: 18 }} />
+            </svg>
+            <div><h3>Ihr Fortschritt</h3><span className="mono sub">{n} von {CHECKLIST.length} erledigt</span></div>
+            <AnimatePresence>{n === CHECKLIST.length && (
+              <motion.span className="badge-done" initial={{ scale: 0, rotate: -20 }} animate={{ scale: 1, rotate: 0 }} exit={{ scale: 0 }} transition={{ type: 'spring', stiffness: 400, damping: 14 }}>Startklar ✓</motion.span>
+            )}</AnimatePresence>
           </div>
-          <div className="meter"><i style={{ width: `${(n / CHECKLIST.length) * 100}%` }} /></div>
           <div className="checks">
             {CHECKLIST.map(([b, t], i) => (
-              <label key={b} htmlFor={`chk-${i}`}>
+              <motion.label key={b} htmlFor={`chk-${i}`} className={done[i] ? 'is-done' : ''} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 + i * 0.05 }} whileTap={{ scale: 0.98 }}>
                 <input type="checkbox" id={`chk-${i}`} checked={!!done[i]} onChange={() => toggle(i)} />
                 <span><b>{b}</b>{t}</span>
-              </label>
+              </motion.label>
             ))}
           </div>
         </div>

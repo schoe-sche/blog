@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import { StepHead, Panel, StepFoot } from '../components.jsx';
 
 // Empfehlung aus den Antworten ableiten – reine Funktion, leicht testbar.
@@ -46,7 +47,7 @@ export default function Setup() {
     <>
       <StepHead n={3} title="Wo sollen Ihre Passkeys liegen?">Vier kurze Fragen – danach sehen Sie, welche Aufbewahrung zu Ihnen passt.</StepHead>
       <div className="grid2">
-        <form className="panel" style={{ gap: 18 }} onSubmit={(e) => e.preventDefault()}>
+        <motion.form initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} className="panel" style={{ gap: 18 }} onSubmit={(e) => e.preventDefault()}>
           <fieldset><legend>Wer soll Passkeys nutzen?</legend><div className="choices">{radio('who', 'me', 'Nur ich')}{radio('who', 'team', 'Unser Team')}</div></fieldset>
           <fieldset><legend>Welche Geräte verwenden Sie?</legend><div className="choices">
             {[['apple', 'iPhone / Mac'], ['android', 'Android'], ['windows', 'Windows']].map(([v, l]) => (
@@ -55,11 +56,15 @@ export default function Setup() {
           </div></fieldset>
           <fieldset><legend>Nutzen Sie schon einen Passwortmanager?</legend><div className="choices">{radio('pm', 'yes', 'Ja')}{radio('pm', 'no', 'Nein')}</div></fieldset>
           <fieldset><legend>Gibt es besonders heikle Konten (E-Banking, Admin-Zugänge)?</legend><div className="choices">{radio('crit', 'yes', 'Ja')}{radio('crit', 'no', 'Nein')}</div></fieldset>
-        </form>
+        </motion.form>
         <Panel title="Unsere Empfehlung für Sie">
-          <div className="reco">{recommend(a).map((o) => (
-            <div key={o.h} className={'card' + (o.extra ? ' extra' : '')}><h3>{o.h}</h3><p>{o.p}</p></div>
-          ))}</div>
+          <LayoutGroup><div className="reco"><AnimatePresence mode="popLayout" initial={false}>{recommend(a).map((o) => (
+            <motion.div layout key={o.h} className={'card' + (o.extra ? ' extra' : '')}
+              initial={{ opacity: 0, scale: 0.96, y: 10 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.96 }}
+              transition={{ type: 'spring', stiffness: 320, damping: 28 }}>
+              <h3>{o.h}</h3><motion.p layout="position">{o.p}</motion.p>
+            </motion.div>
+          ))}</AnimatePresence></div></LayoutGroup>
         </Panel>
       </div>
       <StepFoot n={3} nextLabel="Selbst ausprobieren" />
